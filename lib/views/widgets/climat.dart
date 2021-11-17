@@ -9,8 +9,13 @@ class Climat extends StatelessWidget {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
       CircleAvatar(
         radius: 80,
-        backgroundColor: Colors.white,
-        child: Image.asset("assets/icon/climat/weather-15444.png"),
+        backgroundColor: Colors.white30,
+        child: Container(
+          child: Image.asset(
+            "assets/icon/climat/nuage_soleil_pluie_grand.png",
+            width: Get.height * .20,
+          ),
+        ), //mettre en codition l'image en fonction du climat venant de l'API
       ),
       Container(
         margin: EdgeInsets.only(top: Get.height * .13),
@@ -25,7 +30,7 @@ class Climat extends StatelessWidget {
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.normal),
             ),
             Text(
-              "Samedi, 11 javier",
+              "Samedi, 11 janvier",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
             ),
           ],

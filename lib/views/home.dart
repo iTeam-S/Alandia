@@ -9,19 +9,23 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            height: Get.height * .4,
-            decoration: BoxDecoration(
-                color: Colors.greenAccent.shade400,
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40),
-                    bottomRight: Radius.circular(40))),
-            child: Center(child: Climat()),
-          ),
-          BarreRecherche()
-        ],
+      body: Container(
+        margin: EdgeInsets.only(bottom: 20.0 * 2.5),
+        height: Get.height * .42,
+        child: Stack(
+          children: [
+            Container(
+              height: Get.height * .4,
+              decoration: BoxDecoration(
+                  color: Colors.greenAccent.shade400,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(40),
+                      bottomRight: Radius.circular(40))),
+              child: Center(child: Climat()),
+            ),
+            BarreRecherche()
+          ],
+        ),
       ),
     );
   }
