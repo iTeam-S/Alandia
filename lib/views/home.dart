@@ -1,4 +1,5 @@
 import 'package:alandia/views/widgets/climat.dart';
+import 'package:alandia/views/widgets/recherche.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,7 +9,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
           Container(
             height: Get.height * .4,
@@ -18,9 +19,10 @@ class Home extends StatelessWidget {
                     bottomLeft: Radius.circular(40),
                     bottomRight: Radius.circular(40))),
             child: Center(child: Climat()),
-          )
+          ),
+          BarreRecherche()
         ],
-      ), //en attendant
+      ),
     );
   }
 }
