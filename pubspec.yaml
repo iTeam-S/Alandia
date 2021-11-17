@@ -1,5 +1,5 @@
 name: alandia
-description: A new Flutter project.
+description: ALANDIA est une application de gestion de plantation. Il aidera les simples citoyens qui font de la culture urbaine jusqu’aux grands cultivateurs de démarrer leur plantation et à la gérer au fil du temps jusqu’à l’obtention des résultats. Il permettra aussi au amateur de jardinage et fanatique de flore d’être dans une communauté pour partager leur savoir, problème et conseils.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -31,6 +31,7 @@ dependencies:
   get:
   vertical_card_pager: ^1.5.0
   salomon_bottom_bar: ^3.1.0
+  rounded_loading_button: ^2.0.5
 
 dev_dependencies:
   flutter_test:

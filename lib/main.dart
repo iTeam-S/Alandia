@@ -1,3 +1,4 @@
+import 'package:alandia/views/commencnt.dart';
 import 'package:alandia/views/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
@@ -7,7 +8,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -17,8 +17,6 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
-        routes: {
-          '/': (context) => Home(),
-        });
+        routes: {'/': (context) => Acceuil(), '/home': (context) => Home()});
   }
 }

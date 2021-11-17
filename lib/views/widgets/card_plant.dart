@@ -14,7 +14,9 @@ class _PlantCardState extends State<PlantCard> {
     return Container(
       height: Get.height * .52,
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Get.toNamed('/auto');
+        },
         child: Container(
           width: Get.width * 0.55,
           margin: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
