@@ -27,7 +27,7 @@ class _NavBarState extends State<NavBar> {
                 style: TextStyle(
                   color: Colors.black54,
                 )),
-            selectedColor: Colors.white,
+            selectedColor: Colors.black,
           ),
           SalomonBottomBarItem(
             icon: Icon(
@@ -39,7 +39,7 @@ class _NavBarState extends State<NavBar> {
                 style: TextStyle(
                   color: Colors.black54,
                 )),
-            selectedColor: Colors.white,
+            selectedColor: Colors.black,
           ),
           SalomonBottomBarItem(
             icon: Icon(
@@ -51,7 +51,7 @@ class _NavBarState extends State<NavBar> {
                 style: TextStyle(
                   color: Colors.black54,
                 )),
-            selectedColor: Colors.white,
+            selectedColor: Colors.black,
           ),
         ]);
   }
