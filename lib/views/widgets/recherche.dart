@@ -19,8 +19,8 @@ class BarreRecherche extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              offset: Offset(0, 10),
-              blurRadius: 50,
+              offset: Offset(0, 5),
+              blurRadius: 20,
               color: Colors.green,
             ),
           ],
