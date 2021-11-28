@@ -1,76 +1,71 @@
+import 'package:alandia/constante.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class PlantCard extends StatefulWidget {
-  const PlantCard({Key? key}) : super(key: key);
+class CardPlant extends StatelessWidget {
+  final String title;
+  final String region;
+  final String image;
 
-  @override
-  _PlantCardState createState() => _PlantCardState();
-}
+  CardPlant(this.title, this.region, this.image, {Key? key});
 
-class _PlantCardState extends State<PlantCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: Get.height * .52,
-      child: GestureDetector(
-        onTap: () {
-          Get.toNamed('/auto');
-        },
-        child: Container(
-          width: Get.width * 0.55,
-          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-          padding: EdgeInsets.all(50.0 / 2),
+    return Stack(
+      children: [
+        Container(
+          width: 160,
+          height: 200,
           decoration: BoxDecoration(
-            color: Colors.greenAccent.shade400,
-            borderRadius: BorderRadius.circular(20),
+            color: couleurSecondaire2,
+            borderRadius: BorderRadius.circular(32),
             boxShadow: [
               BoxShadow(
-                offset: Offset(0, 10),
-                blurRadius: 10,
-                color: Colors.black,
-              ),
+                  color: couleurSecondaire2,
+                  blurRadius: 8,
+                  spreadRadius: 1,
+                  offset: Offset(5, 7))
             ],
           ),
+          margin: EdgeInsets.only(right: 16),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: Get.height * .3,
-                width: Get.width * .5,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: ExactAssetImage("assets/img/flower.jpg"),
-                        fit: BoxFit.cover),
-                    borderRadius: BorderRadius.circular(50)),
-              ),
               SizedBox(
-                height: Get.height * .02,
+                width: Get.width * .1,
               ),
-              Row(
-                children: <Widget>[
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: "Margueritte".toUpperCase(),
-                            style: Theme.of(context).textTheme.button),
-                      ],
-                    ),
-                  ),
-                  Spacer(),
-                  Text(
-                    '3 jours',
-                    style: Theme.of(context)
-                        .textTheme
-                        .button!
-                        .copyWith(color: Colors.black),
-                  )
-                ],
+              Container(
+                width: Get.width,
+                height: Get.height * .2,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30)),
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: ExactAssetImage('assets/img/$image'))),
               ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(title,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.normal)),
+                    Text(' $region',
+                        style: TextStyle(
+                            color: couleurPrimaire,
+                            fontWeight: FontWeight.bold))
+                  ],
+                ),
+              )
             ],
           ),
         ),
-      ),
+      ],
     );
   }
 }

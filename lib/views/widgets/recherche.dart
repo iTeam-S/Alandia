@@ -1,3 +1,4 @@
+import 'package:alandia/constante.dart';
 import 'package:flutter/material.dart';
 
 class BarreRecherche extends StatelessWidget {
@@ -21,7 +22,7 @@ class BarreRecherche extends StatelessWidget {
             BoxShadow(
               offset: Offset(0, 5),
               blurRadius: 20,
-              color: Colors.green,
+              color: couleurPrimaire,
             ),
           ],
         ),
@@ -33,7 +34,7 @@ class BarreRecherche extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: "Recherche",
                   hintStyle: TextStyle(
-                    color: Colors.green,
+                    color: couleurPrimaire,
                   ),
                   enabledBorder: InputBorder.none,
                   focusedBorder: InputBorder.none,

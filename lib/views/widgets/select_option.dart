@@ -1,3 +1,4 @@
+import 'package:alandia/constante.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
@@ -48,7 +49,7 @@ class _SelectOptionState extends State<SelectOption> {
         children: <Widget>[
           Expanded(
             child: Container(
-              color: Colors.greenAccent.shade400,
+              color: couleurPrimaire,
               child: Container(
                 decoration: BoxDecoration(
                     color: Colors.white,
